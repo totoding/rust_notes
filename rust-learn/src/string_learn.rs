@@ -24,4 +24,16 @@ pub fn text_learn() {
   for b in s7.bytes() {
     println!("{}", b);
   }
+  
+  let hello = &s7[0..4];
+  println!("{}", hello);
+
+  let n1: String = "hello".into();
+  println!("{n1}");
+
+  let num_str = "43";
+  let num:i128 = num_str.parse().expect("c");
+
+  println!("{num}");
+  
 }
