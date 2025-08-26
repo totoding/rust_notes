@@ -1,7 +1,33 @@
 [package]
-name = "rust-learn"
-version = "0.1.0"
-edition = "2021"
+name = "my_project"           # Package 名称
+version = "0.1.0"            # 版本号
+edition = "2021"             # Rust 版本
+authors = ["Your Name <your.email@example.com>"]
+description = "一个示例项目"
+license = "MIT"
+repository = "https://github.com/username/my_project"
+keywords = ["example", "tutorial"]
+categories = ["development-tools"]
 
+# 库 crate 配置
+[lib]
+name = "rust_learn"          # 库名称（默认与package同名）
+path = "src/lib.rs"          # 库根文件路径（默认）
+
+# 二进制 crate 配置
+[[bin]]
+name = "rust_learn"          # 二进制名称
+path = "src/main.rs"         # 二进制根文件路径
+
+[[bin]]
+name = "tool1"               # 额外二进制程序
+path = "src/bin/tool1.rs"
+
+# 依赖配置
 [dependencies]
-rand = "0.9.0"
+serde = "1.0"               # 普通依赖
+tokio = { version = "1.0", features = ["full"] }
+
+
+[build-dependencies]         # 构建脚本依赖
+cc = "1.0"

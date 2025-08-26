@@ -1,0 +1,17 @@
+[package]
+name = "math_utils"
+version = "0.1.0"
+edition = "2024"
+
+
+[lib]
+name = "math_utils"
+path = "src/lib.rs"
+
+[[bin]]
+name = "calculator"
+path = "src/main.rs"
+
+[[bin]]
+name = "converter"
+path = "src/bin/converter.rs"
