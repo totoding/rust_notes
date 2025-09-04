@@ -1,0 +1,28 @@
+
+GET http://192.168.0.19:3000/
+  ?page=1
+    &pageSize=10
+     &done=true
+content-type: application/json
+
+###
+POST http://192.168.0.19:3000/
+content-type: application/json
+
+{
+    "title": "sample2",
+    "done": true
+}
+
+###
+DELETE http://192.168.0.19:3000/3
+
+
+### 
+PUT http://192.168.0.19:3000/3 
+content-type: application/json
+
+{
+    "title": "aaasample3",
+    "done": false
+}
